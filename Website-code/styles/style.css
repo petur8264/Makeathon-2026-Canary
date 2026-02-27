@@ -511,3 +511,27 @@ body.dark-mode .chart-container {
     background: rgba(17, 24, 39, 0.8);
     border-color: #374151;
 }
+
+/* Estilo del Tooltip que aparecerá sobre las barras */
+.bar {
+    position: relative;
+    cursor: pointer;
+}
+
+.bar:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -65px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(10, 30, 40, 0.95);
+    color: #fff;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    white-space: pre;
+    z-index: 100;
+    border: 1px solid #31718b;
+    pointer-events: none;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
